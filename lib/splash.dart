@@ -12,18 +12,20 @@ class Splash extends StatefulWidget {
 
 class _SplashState extends State<Splash> {
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    Timer(Duration(seconds: 3),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Login()),
+      );
     });
   }
+
   @override
-  Widget build (BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Image.asset("assets/images/pnb.png",height: 10,),
-      ),
+      body: Center(child: Image.asset("assets/images/pnb.png", height: 10)),
     );
   }
 }
